@@ -1,0 +1,12 @@
+//Sources: 
+//https://www.webdesignerdepot.com/2020/12/2-smartest-ways-to-structure-sass/
+// https://sass-lang.com/documentation/
+
+
+// _main.sass — the main partial should contain only the imports of the already mentioned files
+
+@import "base";
+@import "layout";
+@import "components";
+
+

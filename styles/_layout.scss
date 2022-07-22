@@ -1,0 +1,81 @@
+//Sources: 
+// grid https://css-tricks.com/snippets/css/complete-guide-grid/
+// media-q https://css-tricks.com/approaches-media-queries-sass/
+// nav  https://www.w3schools.com/css/css_navbar_horizontal.asp
+
+// _layout.sass — all the Sass code handling the layout, which is the container and grid systems
+
+//DELETE BEFORE DEPLOY
+.grid-item {
+    min-height: 100vh;
+    padding-top: 1em;
+}
+.grid-nav {
+    background-color: blue;
+}
+
+//----------------------------Layout Variable (move to base.scss)
+//Var: Grid
+$grid-start-nav: 1 ;
+$grid-end-nav: 4 ;
+$grid-start: 2 ;
+$grid-end: 3 ;
+$grid-start-mob: 1 ;
+$grid-end-mob: 4 ;
+$grid-start-footer: 1 ;
+$grid-end-footer: 4 ;
+
+//Var: Media
+$media-breakpoint: 768px;
+
+//Var: Nav
+
+
+//----------------------------Navigation (component?)
+nav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding: 2em;
+    li {
+        display: inline;
+        float: left;
+        a {
+            display: block;
+            padding: 8px;
+            text-align: center;
+            &:hover {
+                background-color: grey;
+            };
+        };
+    };
+};
+
+
+//----------------------------Grid-Layout
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 6fr  3fr ;
+    // grid-template-rows:;
+}
+
+.grid-nav {
+    grid-column-start: $grid-start-nav;
+    grid-column-end: $grid-end-nav ;    
+}
+
+.grid-item {
+    grid-column-start: $grid-start-mob;
+    grid-column-end: $grid-end-mob ;
+    @media (min-width: $media-breakpoint) {
+        grid-column-start: $grid-start;
+        grid-column-end: $grid-end ;
+    }
+}
+
+.grid-footer {
+    grid-column-start: $grid-start-footer;
+    grid-column-end: $grid-end-footer ;
+}
+
+//----------------------------Footer
