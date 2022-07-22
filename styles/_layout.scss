@@ -7,17 +7,16 @@
 
 //DELETE BEFORE DEPLOY
 .grid-item {
+    border: 2px;
+    border-style: solid;
     min-height: 100vh;
-    padding-top: 1em;
 }
-.grid-nav {
-    background-color: blue;
+nav {
+    background-color: grey;
 }
 
 //----------------------------Layout Variable (move to base.scss)
 //Var: Grid
-$grid-start-nav: 1 ;
-$grid-end-nav: 4 ;
 $grid-start: 2 ;
 $grid-end: 3 ;
 $grid-start-mob: 1 ;
@@ -28,40 +27,16 @@ $grid-end-footer: 4 ;
 //Var: Media
 $media-breakpoint: 768px;
 
-//Var: Nav
-
-
-//----------------------------Navigation (component?)
-nav {
-    position: sticky;
-    top: 0;
-    right: 0;
-    padding: 2em;
-    li {
-        display: inline;
-        float: left;
-        a {
-            display: block;
-            padding: 8px;
-            text-align: center;
-            &:hover {
-                background-color: grey;
-            };
-        };
-    };
-};
+$footer-height: 20px;
 
 
 //----------------------------Grid-Layout
 .grid-container {
     display: grid;
     grid-template-columns: 3fr 6fr  3fr ;
+    > div:first-of-type {padding-top: 100px;}
+    > div:last-of-type {padding-top: 100px;}
     // grid-template-rows:;
-}
-
-.grid-nav {
-    grid-column-start: $grid-start-nav;
-    grid-column-end: $grid-end-nav ;    
 }
 
 .grid-item {
@@ -76,6 +51,7 @@ nav {
 .grid-footer {
     grid-column-start: $grid-start-footer;
     grid-column-end: $grid-end-footer ;
+    height: $footer-height;
 }
 
 //----------------------------Footer

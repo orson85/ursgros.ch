@@ -1,1 +1,43 @@
 // _components.sass — everything that is reusable – buttons, navbars, cards, and so on
+
+
+//Var: Nav
+$navPadding: 1em;
+
+
+//----------------------------Navigation (component?)
+nav {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    padding: $navPadding 0;
+    ul {
+        float: right;
+        li {
+        display: inline;
+        float: left;
+            a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            &:hover {
+                background-color: grey;
+                };
+            };
+        };
+    };
+};
+
+.appear {
+    transition-timing-function: ease-out;
+    transition: 0.2s;
+    transform: translateY(0);
+}
+
+.disappear {
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    transform: translateY(-130%);
+}
+
+    

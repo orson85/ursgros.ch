@@ -10,9 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="styles/main.css">
-
-    <!-- Scripts Head -->
+    <link rel="stylesheet" href="/styles/main.css">
 
 
   </head>
@@ -22,10 +20,9 @@
     <!-- <header>
     </header> -->
     
-    <div class="grid-container">
     <!---------------------------------------------Navigation -->
-    <div class="grid-nav">
-      <nav>
+    <div>
+      <nav class="appear">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -34,33 +31,35 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
     </div>
 
+  <div class="grid-container">
     <!---------------------------------------------Home -->
-    <div class="grid-item" id="home">
+    <div class="grid-item content" id="home">
       <h2>Home</h2>
       <p>Hallo! Mein Name ist Urs</p>
       <p>Ich bin neu hier und dies ist meine erste Webseite.</p>
     </div>
 
     <!---------------------------------------------Skills -->
-    <div class="grid-item" id="skills">
+    <div class="grid-item content" id="skills">
       <h2>Skills</h2>
     </div>
     
     <!---------------------------------------------Projects -->
-    <div class="grid-item" id="projects">
+    <div class="grid-item content" id="projects">
       <h2>Projects</h2>
     </div>
 
     <!---------------------------------------------About -->
-    <div class="grid-item" id="about">
+    <div class="grid-item content" id="about">
       <h2>About</h2>
     </div>
 
 
     <!---------------------------------------------Contact -->
-    <div class="grid-item" id="contact">
+    <div class="grid-item content" id="contact">
       <h2>Contact</h2>
     </div>
     
@@ -74,6 +73,8 @@
   </div> 
 
   </body>
-  <script src="/assets/js/scripts.js"></script>
+  <script type="module" src="main.js"></script>
+  <!-- <script src="m2.js"></script> -->
+
 
 </html>
