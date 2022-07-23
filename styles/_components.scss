@@ -27,15 +27,15 @@
 };
 
 
-//NavList
+//NavList for Mobile
 // Src: https://www.w3schools.com/css/css_navbar_vertical.asp
 .navList {
     position: fixed;
-    right: 0;
+    right: 10em;
     ul {
         width: 200px;
         //background-color: #f1f1f1;
-      }   
+      }
     li a {
         display: block;
         padding: 8px 16px;
@@ -46,35 +46,47 @@
 };
 
 //BurgerBar-Mixin
-@mixin burgerBar($topPos, $rightPos) {
-    position: absolute;
-    top: $topPos;
-    right: $rightPos;
-    min-width: 30px;
-    min-height: 4px;
+@mixin burgerBar {
+    width: auto;
+    height: 4px;
     background: black;
 }
 
-//NavBurger
+.nav-burger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: red;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+//Burger-Open
 .burger-open {
-    @include burgerBar(60px, 60px);
+    width: auto;
+    height: 4px;
+    background: black;
+    transform: translateY(20px);
     &::before {
         content: '';
-        @include burgerBar(-10px, 0px);
-    }
-    &::after {
-        content: '';
-        @include burgerBar(10px, 0px);
+        
+        height: 4px;
+        background: black;
+        top: 10px;
+        width: 28px;
     }
 }
 
+
+//Burger-Close
 .burger-close {
-    @include burgerBar(60px, 60px);
+    @include burgerBar();
     transform: rotate(45deg);
     &::before {
         content: '';
-        @include burgerBar(0px, 0px);
+        @include burgerBar();
         transform: rotate(90deg);
+
     }
 }
 
@@ -92,4 +104,57 @@
     transform: translateY(-130%);
 }
 
-    
+.hidden {
+    visibility: hidden;
+}
+
+.seen {
+    visibility: visible;
+}
+
+
+
+
+
+//-----------Graveyard---------------//
+
+
+//NavBurger
+// @keyframes animateBurgerOpen {
+//     from { transform: translateY(0px);}
+//     to {transform: translateY(10px);}
+// }
+// @keyframes animateBurgerOpenNeg {
+//     from { transform: translateY(0px);}
+//     to {transform: translateY(-10px);}
+// }
+
+
+// .burger-open-animation {
+//     &::before {
+//         animation-name: animateBurgerOpen;
+//         animation-duration: 1s;
+//         animation-direction: reverse;
+//     }
+//     &::after {
+//         animation-name: animateBurgerOpenNeg;
+//         animation-duration: 1s;
+//         animation-direction: reverse;
+//     }
+// }
+
+
+//Animationen Burger-Close
+// @keyframes animateBurgerClose {
+//     from {transform: rotate(0deg);}
+//     to {transform: rotate(45deg);}
+// }
+// @keyframes animateBurgerCloseNeg {
+//     from {transform: rotate(0deg);}
+//     to {transform: rotate(-90deg);}
+// }
+
+
+// animation-name: animateBurgerCloseNeg;
+// animation-duration: 1s;
+

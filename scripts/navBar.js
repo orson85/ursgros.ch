@@ -24,6 +24,9 @@ function navBarScroll(){
 function toggleBurger() {
    navBurger.classList.toggle("burger-close");
    navBurger.classList.toggle("burger-open");
+   nav.classList.toggle("hidden");
+   nav.classList.toggle("appear");
+   nav.classList.toggle("disappear");
    console.log("Wee!")
    
 }

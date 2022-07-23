@@ -83,7 +83,7 @@ nav {
 
 .navList {
   position: fixed;
-  right: 0;
+  right: 10em;
 }
 
 .navList ul {
@@ -99,41 +99,34 @@ nav {
   background-color: aqua;
 }
 
-.burger-open {
-  position: absolute;
-  top: 60px;
-  right: 60px;
+.nav-burger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: red;
   min-width: 30px;
-  min-height: 4px;
+  min-height: 30px;
+}
+
+.burger-open {
+  width: auto;
+  height: 4px;
   background: black;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 .burger-open::before {
   content: '';
-  position: absolute;
-  top: -10px;
-  right: 0px;
-  min-width: 30px;
-  min-height: 4px;
+  height: 4px;
   background: black;
-}
-
-.burger-open::after {
-  content: '';
-  position: absolute;
   top: 10px;
-  right: 0px;
-  min-width: 30px;
-  min-height: 4px;
-  background: black;
+  width: 28px;
 }
 
 .burger-close {
-  position: absolute;
-  top: 60px;
-  right: 60px;
-  min-width: 30px;
-  min-height: 4px;
+  width: auto;
+  height: 4px;
   background: black;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -141,11 +134,8 @@ nav {
 
 .burger-close::before {
   content: '';
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  min-width: 30px;
-  min-height: 4px;
+  width: auto;
+  height: 4px;
   background: black;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -167,5 +157,13 @@ nav {
   transition: 0.2s;
   -webkit-transform: translateY(-130%);
           transform: translateY(-130%);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.seen {
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */
