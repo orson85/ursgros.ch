@@ -1,33 +1,85 @@
 // _components.sass — everything that is reusable – buttons, navbars, cards, and so on
 
 
-//Var: Nav
-$navPadding: 1em;
+//----------------------------Navigation
 
-
-//----------------------------Navigation (component?)
-nav {
+//NavBar
+.navBar {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    padding: $navPadding 0;
     ul {
         float: right;
+        overflow: hidden;
         li {
-        display: inline;
-        float: left;
+            display: inline;
+            float: left;
             a {
-            display: block;
-            padding: 10px;
-            text-align: center;
-            &:hover {
-                background-color: grey;
-                };
+                display: block;
+                padding: $navPadding;
+                text-align: center;
             };
+            &:hover {
+                background-color: palegoldenrod;
+                };
         };
     };
 };
 
+
+//NavList
+// Src: https://www.w3schools.com/css/css_navbar_vertical.asp
+.navList {
+    position: fixed;
+    right: 0;
+    ul {
+        width: 200px;
+        //background-color: #f1f1f1;
+      }   
+    li a {
+        display: block;
+        padding: 8px 16px;
+        &:hover {
+            background-color: aqua;
+        }
+      }
+};
+
+//BurgerBar-Mixin
+@mixin burgerBar($topPos, $rightPos) {
+    position: absolute;
+    top: $topPos;
+    right: $rightPos;
+    min-width: 30px;
+    min-height: 4px;
+    background: black;
+}
+
+//NavBurger
+.burger-open {
+    @include burgerBar(60px, 60px);
+    &::before {
+        content: '';
+        @include burgerBar(-10px, 0px);
+    }
+    &::after {
+        content: '';
+        @include burgerBar(10px, 0px);
+    }
+}
+
+.burger-close {
+    @include burgerBar(60px, 60px);
+    transform: rotate(45deg);
+    &::before {
+        content: '';
+        @include burgerBar(0px, 0px);
+        transform: rotate(90deg);
+    }
+}
+
+
+//Transitions
 .appear {
     transition-timing-function: ease-out;
     transition: 0.2s;

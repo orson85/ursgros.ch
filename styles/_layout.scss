@@ -34,8 +34,7 @@ $footer-height: 20px;
 .grid-container {
     display: grid;
     grid-template-columns: 3fr 6fr  3fr ;
-    > div:first-of-type {padding-top: 100px;}
-    > div:last-of-type {padding-top: 100px;}
+    > div:first-of-type {padding-top: $navPadding+50px;}
     // grid-template-rows:;
 }
 

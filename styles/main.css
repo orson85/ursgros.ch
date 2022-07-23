@@ -31,11 +31,7 @@ nav {
 }
 
 .grid-container > div:first-of-type {
-  padding-top: 100px;
-}
-
-.grid-container > div:last-of-type {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .grid-item {
@@ -59,30 +55,100 @@ nav {
   height: 20px;
 }
 
-nav {
+.navBar {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  padding: 1em 0;
 }
 
-nav ul {
+.navBar ul {
   float: right;
+  overflow: hidden;
 }
 
-nav ul li {
+.navBar ul li {
   display: inline;
   float: left;
 }
 
-nav ul li a {
+.navBar ul li a {
   display: block;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 
-nav ul li a:hover {
-  background-color: grey;
+.navBar ul li:hover {
+  background-color: palegoldenrod;
+}
+
+.navList {
+  position: fixed;
+  right: 0;
+}
+
+.navList ul {
+  width: 200px;
+}
+
+.navList li a {
+  display: block;
+  padding: 8px 16px;
+}
+
+.navList li a:hover {
+  background-color: aqua;
+}
+
+.burger-open {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  min-width: 30px;
+  min-height: 4px;
+  background: black;
+}
+
+.burger-open::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  min-width: 30px;
+  min-height: 4px;
+  background: black;
+}
+
+.burger-open::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  min-width: 30px;
+  min-height: 4px;
+  background: black;
+}
+
+.burger-close {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  min-width: 30px;
+  min-height: 4px;
+  background: black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger-close::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  min-width: 30px;
+  min-height: 4px;
+  background: black;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .appear {
