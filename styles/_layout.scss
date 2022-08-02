@@ -26,16 +26,19 @@ $grid-start-footer: 1 ;
 $grid-end-footer: 4 ;
 
 //Var: Media
-$media-breakpoint: 768px;
-
+$media-breakpoint: 640px; //if changed -> change navBar.js
 $footer-height: 20px;
+
+:export {
+    media-breakpoint: $media-breakpoint;
+}
 
 
 //----------------------------Grid-Layout
 .grid-container {
     display: grid;
     grid-template-columns: 3fr 6fr  3fr ;
-    > div:first-of-type {padding-top: $navPadding+50px;}
+    > div {padding-top: $navPadding+50px;}
     // grid-template-rows:;
 }
 

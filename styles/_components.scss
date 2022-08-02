@@ -3,11 +3,13 @@
 
 //----------------------------Navigation
 
+
 //NavBar
 .navBar {
     overflow: hidden;
     position: fixed;
     width: 100%;
+
     ul {
         float: right;
         overflow: hidden;
@@ -31,7 +33,8 @@
 // Src: https://www.w3schools.com/css/css_navbar_vertical.asp
 .navList {
     position: fixed;
-    right: 10em;
+    right: 0;
+    top:0;
     ul {
         width: 200px;
         //background-color: #f1f1f1;
@@ -45,51 +48,17 @@
       }
 };
 
-//BurgerBar-Mixin
-@mixin burgerBar {
-    width: auto;
-    height: 4px;
-    background: black;
-}
-
 .nav-burger {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background: red;
-    min-width: 30px;
-    min-height: 30px;
-}
-
-//Burger-Open
-.burger-open {
-    width: auto;
-    height: 4px;
-    background: black;
-    transform: translateY(20px);
-    &::before {
-        content: '';
-        
-        height: 4px;
-        background: black;
-        top: 10px;
-        width: 28px;
-    }
+    top: 0;
+    right: 0;
+    background: rgb(191, 159, 159);
+    min-width: 40px;
+    min-height: 40px;
 }
 
 
-//Burger-Close
-.burger-close {
-    @include burgerBar();
-    transform: rotate(45deg);
-    &::before {
-        content: '';
-        @include burgerBar();
-        transform: rotate(90deg);
-
-    }
-}
-
+// 
 
 //Transitions
 .appear {
@@ -104,13 +73,8 @@
     transform: translateY(-130%);
 }
 
-.hidden {
-    visibility: hidden;
-}
-
-.seen {
-    visibility: visible;
-}
+.hidden {visibility: hidden;}
+.seen {visibility: visible;}
 
 
 
@@ -157,4 +121,58 @@
 
 // animation-name: animateBurgerCloseNeg;
 // animation-duration: 1s;
+
+
+//Burger Balken-Mixin
+// @mixin burgerBar {
+//     width: auto;
+//     height: 4px;
+//     background: black;
+// }
+
+// //Var
+
+// //Burger-Icon
+// .nav-burger {
+//     position: fixed;
+//     top: 20px;
+//     right: 20px;
+//     background: rgb(191, 159, 159);
+//     min-width: 30px;
+//     min-height: 30px;
+//     visibility: visible; 
+//     @media (min-width: $media-breakpoint) {
+//         visibility: hidden;
+//     }
+// }
+
+// //Burger-Open
+// .burger-open {
+//     width: auto;
+//     height: 4px;
+//     background: black;
+//     transform: translateY(20px);
+//     &::before {
+//         content: '';
+        
+//         height: 4px;
+//         background: black;
+//         top: 10px;
+//         width: 28px;
+//     }
+// }
+
+
+// //Burger-Close
+// .burger-close {
+//     @include burgerBar();
+//     transform: rotate(45deg);
+//     &::before {
+//         content: '';
+//         @include burgerBar();
+//         transform: rotate(90deg);
+
+//     }
+// }
+
 
