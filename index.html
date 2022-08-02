@@ -21,9 +21,9 @@
     </header> -->
     
     <!---------------------------------------------Navigation -->
-    <div>
-      
-      <nav id="nav" class="navList hidden">
+    
+    <header>
+      <nav id="nav" class="navBar hidden">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -33,20 +33,26 @@
         </ul>
       </nav>
 
-      <div class="nav-burger">
-        <div class="burger-open"></div>
-        <!-- <div id="navBurger" class="nav-burger burger-open"></div> -->
-      </div>
-    
-        
-    </div>
+      <div id="navBurger" class="nav-burger hidden"></div>
+    </header>
 
   <div class="grid-container">
     <!---------------------------------------------Home -->
     <div class="grid-item content" id="home">
-      <h2>Home</h2>
-      <p>Hallo! Mein Name ist Urs</p>
-      <p>Ich bin neu hier und dies ist meine erste Webseite.</p>
+      <div id="content">
+        <p id="1" class="">Hi, iam Urs. Welcome to my website!</p>
+        <p id="1.1" class="hidden">It's actually the first website I ever build and released by myself.</p>
+        <p id="2" class="">I study information science at the Fachhochschule Graunbünden.</p>
+        <p id="2.1" class="hidden">I learn about all kind of different technologies and concepts. I often feel like a kid let loose in a candy store. There is so much cool stuff to learn and discover!</p>
+        <p id="3" class="">I am Majoring in Web- and Usability-Design</p>
+        <p id="3.1" class="hidden">To me it seemed to be the most technical and "hands-on" major of the bunch.</p>
+        <p id="4" class="">A year ago I had a course in web programming</p>
+        <p id="4.1" class="hidden">I already "knew" HTML and CSS. I am actually right now discovering, that I still know little, especially with CSS.</p>
+        <p id="5" class="">I did some projects</p>
+        <p id="5.1" class="hidden">in Javascript. While our classmates all created some kind of video game (which I love!), me project partner and I decided to create a website using an API. Why take a course in web programming, if you don't create websites?</p>
+        <p id="6" class="">and fell in love with it</p>
+        <p id="6.1" class="hidden">Doing these projects was a lot of fun, hard work and effin frustrating (looking at you CORS-Rules!). We had to do a lot of research and learn about concepts we never heard about.</p>
+    </div>
     </div>
 
     <!---------------------------------------------Skills -->
@@ -87,7 +93,5 @@
 
   </body>
   <script type="module" src="main.js"></script>
-  <!-- <script src="m2.js"></script> -->
-
 
 </html>
